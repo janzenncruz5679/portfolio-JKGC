@@ -72,12 +72,12 @@ const AboutSection = () => {
                                 )
                             })}
                         </div>
-                        <Image
+                        {/* <Image
                             src="/boy.png"
                             className='hidden, md:block md:relative md:bottom-4 md:left-32 md:z-0'
                             alt=''
                             width={325}
-                            height={100} />
+                            height={100} /> */}
                     </div>
                 </div>
                 {/* <div className='flex flex-row justify-center'>

@@ -9,17 +9,24 @@ import { TypeAnimation } from 'react-type-animation';
 const HeroSection = () => {
   return (
     <section id='home'>
-      <div className='flex flex-col text-center items-center justify-center my-10 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-48'>
+      <div className='flex flex-col text-center gap-8 items-center justify-center my-10 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-38'>
         <div className='md:w-1/2 md:mt-2'>
-          <Image src={'/zen.png'} width={325} height={325} alt='profile' className='rounded-full shadow-2xl' />
+          <div className="relative w-48 h-48 md:w-96 md:h-96 xl:w-128 xl:h-128">
+            <Image
+              src={'/zen.png'}
+              alt='profile'
+              layout="fill"
+              objectFit="cover"
+              className='rounded-full shadow-2xl'
+            />
+          </div>
         </div>
         <div className='md:w-3/5 md:mt-2 '>
           {/* <h1 className='font-bold text-4xl mt-6 md:text-7xl md:mt-0'>Hi, I am Janzenn!</h1> */}
           <TypeAnimation
             sequence={[
-              // Same substring at the start will only be typed out once, initially
               'Hi,',
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              1000,
               'Hi, I ',
               1000,
               'Hi, I am',
@@ -36,10 +43,10 @@ const HeroSection = () => {
           />
           <p className='text-lg mt-4 mb-6 md:text-2xl'>
             I am {" "}
-            <span className='font-semibold text-teal-600'>
+            <span className='font-semibold text-teal-600 dark:text-teal-400'>
               Computer Science Graduate{" "}
             </span>
-            based in Philippines. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et possimus neque consequuntur ipsa pariatur odit, harum expedita ullam ratione!
+            based in Guiguinto Bulacan. Aspiring to be a part of a dynamic organization giving a motivational working environment and looking for a responsible and challenging assignment that will foster my advancement and long-term relationship in an organization where my experience, education, and talent could make a significant contribution towards corporate objectives.
           </p>
           <div className='grid grid-cols-2 gap-4'>
             <Link

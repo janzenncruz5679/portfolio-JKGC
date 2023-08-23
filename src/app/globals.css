@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    /* Apply the blur effect only for devices with a screen width of 768px and larger */
+    .glass {
+        backdrop-filter: blur(20px);
+    }
+}

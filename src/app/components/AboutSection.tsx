@@ -62,7 +62,13 @@ const AboutSection = () => {
                     </div>
                     <div className='md:w-1/2'>
                         <h1 className='text-center text-2xl font-bold mb-6 md:text-left'>My Skills</h1>
-                        <div className='flex flex-wrap gap-2 flex-row justify-center md:justify-start cursor-default'>
+                        <div className='flex flex-wrap gap-2 flex-row justify-center md:justify-start cursor-default bg-red-200 animate-fadeIn'
+                        data-te-animation-init
+                        data-te-animation-start="onScroll"
+                        data-te-animation-on-scroll="repeat"
+                        data-te-animation-show-on-load="false"
+                        data-te-animation="[slide-right_1s_ease-in-out]"
+                        >
                             {skills.map((item, idx) => {
                                 return (
                                     <motion.div

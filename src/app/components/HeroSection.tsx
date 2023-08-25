@@ -9,7 +9,7 @@ import { TypeAnimation } from 'react-type-animation';
 const HeroSection = () => {
   return (
     <section id='home'>
-      <div className='flex flex-col text-center gap-8 items-center justify-center my-10 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-38'>
+      <div className='flex flex-col text-center gap-8 items-center justify-center mb-12 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-38'>
         <div className='md:w-1/2 md:mt-2'>
           <div className="relative w-48 h-48 md:w-96 md:h-96 xl:w-128 xl:h-128">
             <Image
@@ -52,7 +52,7 @@ const HeroSection = () => {
             <Link
               to="projects"
               className={
-                "text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer"
+                "text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer hover:-translate-y-1 transition-transform"
               }
               activeClass="active"
               spy={true}
@@ -62,7 +62,7 @@ const HeroSection = () => {
             >My Projects</Link>
             <a
               className={
-                "text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer"
+                "text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer hover:-translate-y-1 transition-transform"
               }
               href={'/Janzenn_Cruz_CV.pdf'}
               target='_blank'

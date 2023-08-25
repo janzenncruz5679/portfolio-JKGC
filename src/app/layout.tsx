@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className='scrollbar scroll-thin scrollbar-thumb-neutral-800 dark:scrollbar-thumb-neutral-100'>
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           {children}

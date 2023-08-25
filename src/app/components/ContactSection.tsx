@@ -22,11 +22,16 @@ const ContactSection: FC = () => {
     return (
 
         <section id='contact'>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='my-28 pb-12 md:py-12'>
+                <h1 className='text-center font-bold text-4xl'>
+                    Contact Me
+                    <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+                </h1>
+                <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='mb-5'>
                     <label
                         htmlFor='name'
-                        className='mb-3 block text-base font-medium text-black'
+                        className='mb-3 block text-base font-medium'
                     >
                         Full Name
                     </label>
@@ -40,7 +45,7 @@ const ContactSection: FC = () => {
                 <div className='mb-5'>
                     <label
                         htmlFor='email'
-                        className='mb-3 block text-base font-medium text-black'
+                        className='mb-3 block text-base font-medium'
                     >
                         Email Address
                     </label>
@@ -54,7 +59,7 @@ const ContactSection: FC = () => {
                 <div className='mb-5'>
                     <label
                         htmlFor='message'
-                        className='mb-3 block text-base font-medium text-black'
+                        className='mb-3 block text-base font-medium'
                     >
                         Message
                     </label>
@@ -71,6 +76,7 @@ const ContactSection: FC = () => {
                     </button>
                 </div>
             </form>
+                </div>
         </section>
     )
 }

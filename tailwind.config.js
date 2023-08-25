@@ -18,6 +18,7 @@ module.exports = {
             animation: {
                 bounce: "bounce 0.5s alternate cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite",
                 slideUpCubiBezier: "slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                fadeIn: "fadeIn 2s ease-in forwards"
             },
             keyframes: {
                 bounce: {
@@ -28,8 +29,18 @@ module.exports = {
                     from: { transform: "translateY(100%)" },
                     to: { transform: "translateY(0)" },
                 },
+                wiggle: {
+                    '0%, 100%': { transform: 'rotate(-3deg)' },
+                    '50%': { transform: 'rotate(3deg)' },
+                },
+                fadeIn: {
+                    "0%": { opacity: 0 },
+                    "100%": { opacity: 1 }
+                }
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require("tailwind-scrollbar")
+    ],
 }

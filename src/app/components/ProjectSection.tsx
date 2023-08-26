@@ -39,6 +39,7 @@ import {
 interface Project {
     name: string;
     description: string;
+    longDescription: string;
     image: string;
     github: string;
     link: string;
@@ -50,6 +51,7 @@ const initialProjects: Project[] = [
     {
         name: "San Miguel District Hospital EMR",
         description: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. My role in this project is a fullstack developer. ",
+        longDescription: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. My role in this project is a fullstack developer. San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history.",
         image: "/smdh-emr.jpg",
         github: "https://github.com/ohmypotato/SMDH-EMR",
         link: "https://github.com/ohmypotato/SMDH-EMR",
@@ -69,6 +71,7 @@ const initialProjects: Project[] = [
     {
         name: "Hospital Appointment System",
         description: "A hospital appointment system using Laravel CRUD. Admin side utilized Corona admin template with Bootstrap, and user side employed One-health template with HTML/CSS styling.",
+        longDescription: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. My role in this project is a fullstack developer. ",
         image: "/appointment-system.jpg",
         github: "https://github.com/ohmypotato/hospital-appointment-system",
         link: "https://github.com/ohmypotato/hospital-appointment-system",
@@ -141,16 +144,16 @@ const ProjectSection: React.FC = () => {
                             {project.isHidden === false && (
                                 <div className="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                     <div
-                                        className="absolute h-2/4 w-2/3 md:h-2/3 lg:h-3/4 grid gap-4 transform overflow-hidden p-6 md:p-12 lg:p-14 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
+                                        className="absolute h-2/4 w-2/3 md:h-2/3 lg:h-3/4 grid gap-4 transform overflow-hidden p-6 md:p-12 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
                                     >
-                                        <div className='flex flex-col gap-2 md:gap-4 xl:grid-cols-2'>
-                                            <div className="relative h-24 w-full md:h-3/5 lg:h-4/5 xl:h-[90%]">
+                                        <div className=''>
+                                            <div className="relative h-3/6 lg:h-3/5 xl:h-[65%] w-full">
                                                 <Image
                                                     src={project.image}
                                                     alt=''
                                                     layout="fill"
                                                     objectFit="cover"
-                                                    className=''
+                                                    className='pb-2'
                                                 />
                                             </div>
                                             <div>
@@ -158,7 +161,8 @@ const ProjectSection: React.FC = () => {
                                                     onClick={() => toggleVisibility(idx)}
                                                     className="absolute top-2 right-2 lg:hover:-translate-y-1 lg:transition-transform cursor-pointer h-4 w-4 md:h-8 md:w-8" />
                                                 <div className='grid gap-2'>
-                                                    <p className='text-[10px] md:text-base lg:text-xl'>{project.description}</p>
+                                                    <p className='text-[10px] md:text-base lg:hidden'>{project.description}</p>
+                                                    <p className='hidden lg:block text-[10px] md:text-base lg:text-xl'>{project.longDescription}</p>
                                                     <div>
                                                     <h2 className='text-[10px] md:text-base lg:text-xl'>Stack used: </h2>
                                                     <div className='flex flex-wrap gap-2 md:gap-4'>
@@ -169,7 +173,7 @@ const ProjectSection: React.FC = () => {
                                                     </div>
                                                     <a
                                                         className={
-                                                            "text-neutral-100 font-semibold text-center my-2 text-sm lg:text-xl bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer lg:hover:-translate-y-1 lg:transition-transform"
+                                                            "text-neutral-100 font-semibold text-center mt-2 text-sm lg:text-xl bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer lg:hover:-translate-y-1 lg:transition-transform"
                                                         }
                                                         href={project.link}
                                                         target='_blank'

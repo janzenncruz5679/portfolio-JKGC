@@ -5,21 +5,60 @@ import Image from 'next/image'
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { motion } from "framer-motion"
+// import 'devicon/devicon.min.css'
+import {    SiHtml5, 
+            SiCss3, 
+            SiTailwindcss, 
+            SiBootstrap, 
+            SiSass, 
+            SiJavascript,
+            SiTypescript, 
+            SiJquery, 
+            SiReact, 
+            SiNextdotjs, 
+            SiCsharp, 
+            SiUnity, 
+            SiPhp, 
+            SiLaravel, 
+            SiMysql, 
+            SiGit, 
+            SiGithub, 
+            SiBitbucket,
+            SiJira,
+            SiAndroidstudio, } from 'react-icons/si'
+import {    BiLogoJava,
+            BiLogoAndroid,
+            BiLogoPython,
+            BiLogoFlutter,
+            BiLogoGoLang, } from 'react-icons/bi'
 
 
 const skills = [
-    { skill: "HTML" },
-    { skill: "CSS" },
-    { skill: "JavaScript" },
-    { skill: "TypeScript" },
-    { skill: "Python" },
-    { skill: "React" },
-    { skill: "Next.js" },
-    { skill: "Tailwind CSS" },
-    { skill: "PHP" },
-    { skill: "Laravel" },
-    { skill: "Git" },
-    { skill: "GitHub" },
+    { skill: SiHtml5, description: 'HTML5' },
+    { skill: SiCss3, description: 'CSS' },
+    { skill: SiTailwindcss, description: 'Tailwind CSS' },
+    { skill: SiBootstrap, description: 'Bootstrap' },
+    { skill: SiSass, description: 'SASS' },
+    { skill: SiJavascript, description: 'javascript' },
+    { skill: SiTypescript, description: 'Typescript' },
+    { skill: SiJquery, description: 'jQuery'},
+    { skill: SiReact, description: 'React' },
+    { skill: SiNextdotjs, description: 'Next.js' },
+    { skill: SiCsharp, description: 'C#' },
+    { skill: SiUnity, description: 'Unity' },
+    { skill: SiPhp, description: 'PHP' },
+    { skill: SiLaravel, description: 'Laravel' },
+    { skill: SiMysql, description: 'MySQL' },
+    { skill: SiGit, description: 'Git' },
+    { skill: SiGithub, description: 'Github' },
+    { skill: SiBitbucket, description: 'Bitbucket' },
+    { skill: SiJira, description: 'Jira' },
+    { skill: BiLogoJava, description: 'Java' },
+    { skill: BiLogoAndroid, description: 'Android' },
+    { skill: SiAndroidstudio, description: 'Android Studio' },
+    { skill: BiLogoPython, description: 'Python' },
+    { skill: BiLogoFlutter, description: 'Flutter' },
+    { skill: BiLogoGoLang, description: 'GoLang' },
 ]
 
 const AboutSection = () => {
@@ -47,7 +86,7 @@ const AboutSection = () => {
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                             >
-                                <h1 className="text-2xl font-semibold mb-4">Web Development</h1>
+                                <h1 className="text-2xl font-semibold mb-4">Software Development</h1>
                                 <p>This is a div with an enhanced glassmorphism design using Tailwind CSS.</p>
                             </motion.div>
                             <motion.div
@@ -55,29 +94,26 @@ const AboutSection = () => {
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                             >
-                                <h1 className="text-2xl font-semibold mb-4">Web Development</h1>
+                                <h1 className="text-2xl font-semibold mb-4">Game Development</h1>
                                 <p>This is a div with an enhanced glassmorphism design using Tailwind CSS.</p>
                             </motion.div>
                         </div>
                     </div>
                     <div className='md:w-1/2'>
-                        <h1 className='text-center text-2xl font-bold mb-6 md:text-left'>My Skills</h1>
-                        <div className='flex flex-wrap gap-2 flex-row justify-center md:justify-start cursor-default bg-red-200 animate-fadeIn'
-                        data-te-animation-init
-                        data-te-animation-start="onScroll"
-                        data-te-animation-on-scroll="repeat"
-                        data-te-animation-show-on-load="false"
-                        data-te-animation="[slide-right_1s_ease-in-out]"
-                        >
+                        <h1 className='text-center text-2xl font-bold mb-6 md:text-left'> Technologies I've been working with: </h1>
+                        <div className='flex flex-wrap gap-2 flex-row justify-center md:justify-start cursor-default'>
                             {skills.map((item, idx) => {
                                 return (
                                     <motion.div
                                         key={idx}
-                                        className='glass px-4 py-2 mr-2 mt-2 rounded font-semibold'
+                                        className='px-2 py-2 rounded font-semibold h-12 w-12 md:h-16 md:w-16 '
                                         whileHover={{ scale: 1.1 }}
                                         transition={{ type: "spring", stiffness: 200, damping: 10 }}
                                     >
-                                        <p key={idx} className="">{item.skill}</p>
+                                        <item.skill 
+                                            key={idx} 
+                                            className="h-full w-full cursor-pointer"
+                                            title={item.description}/>
                                     </motion.div>
                                 )
                             })}

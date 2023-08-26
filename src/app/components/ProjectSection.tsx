@@ -37,11 +37,11 @@ const initialProjects: Project[] = [
         ],
     },
     {
-        name: "San Miguel District Hospital EMR",
-        description: "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
+        name: "Hospital-appointment-system",
+        description: "Created using corona admin for admin and One-health template for user",
         image: "/thankfulthoughts.png",
-        github: "https://github.com/ohmypotato/SMDH-EMR",
-        link: "https://github.com/ohmypotato/SMDH-EMR",
+        github: "https://github.com/ohmypotato/hospital-appointment-system",
+        link: "https://github.com/ohmypotato/hospital-appointment-system",
         isHidden: true,
         svg: [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"

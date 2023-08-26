@@ -76,7 +76,7 @@ const AboutSection = () => {
                             <motion.div
                                 className="glass p-4 rounded-lg shadow-lg cursor-default"
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                transition={{ type: "spring", stiffness: 50, damping: 10 }}
                             >
                                 <h1 className="text-2xl font-semibold mb-4">Web Development</h1>
                                 <p>This is a div with an enhanced glassmorphism design using Tailwind CSS.</p>

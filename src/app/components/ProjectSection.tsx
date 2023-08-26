@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import SlideUp from './SlideUp'
+import { motion } from "framer-motion"
 
 
 interface Project {
@@ -21,7 +22,7 @@ const initialProjects: Project[] = [
     {
         name: "San Miguel District Hospital EMR",
         description: "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-        image: "/thankfulthoughts.png",
+        image: "/smdh-emr.jpg",
         github: "https://github.com/ohmypotato/SMDH-EMR",
         link: "https://github.com/ohmypotato/SMDH-EMR",
         isHidden: true,
@@ -39,31 +40,9 @@ const initialProjects: Project[] = [
     {
         name: "Hospital-appointment-system",
         description: "Created using corona admin for admin and One-health template for user",
-        image: "/thankfulthoughts.png",
+        image: "/appointment-system.jpg",
         github: "https://github.com/ohmypotato/hospital-appointment-system",
         link: "https://github.com/ohmypotato/hospital-appointment-system",
-        isHidden: true,
-        svg: [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
-        ],
-    },
-    {
-        name: "San Miguel District Hospital EMR",
-        description: "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-        image: "/thankfulthoughts.png",
-        github: "https://github.com/ohmypotato/SMDH-EMR",
-        link: "https://github.com/ohmypotato/SMDH-EMR",
-        isHidden: true,
-        svg: [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
-        ],
-    },
-    {
-        name: "San Miguel District Hospital EMR",
-        description: "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-        image: "/thankfulthoughts.png",
-        github: "https://github.com/ohmypotato/SMDH-EMR",
-        link: "https://github.com/ohmypotato/SMDH-EMR",
         isHidden: true,
         svg: [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
@@ -106,20 +85,22 @@ const ProjectSection: React.FC = () => {
     };
     return (
         <section id='projects'>
+            <div className='h-24'>
             <h1 className='text-center font-bold text-4xl'>
-                Projects
+                My Projects
                 <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
             </h1>
-            <div className='flex flex-col space-y-28'>
+            </div>
+            <div className='flex flex-col space-y-12'>
                 {/* use map function to call const projects which is a dictionary */}
-                <div>
-                    {/* Map over projects */}
-                    {projects.map((project, idx) => (
-                        <div key={idx}>
-                            {/* adding slideup animation */}
-                            <SlideUp offset="-300px 0px -300px 0px">
-                                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                                    <div className="mt-8 md:w-1/2">
+                {/* Map over projects */}
+                {projects.map((project, idx) => (
+                    <div key={idx}>
+                        {/* adding slideup animation */}
+                        <SlideUp offset="-300px 0px -300px 0px">
+                            <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+                                <div className='glass sm:flex sm:flex-col lg:grid lg:grid-cols-2 p-6 gap-4 lg:gap-6 rounded-3xl hover:-translate-y-3 transition-transform'>
+                                    <div className="h-full w-full">
                                         <button
                                             onClick={() => toggleVisibility(idx)} // Click handler for the button
                                             className="rounded-xl shadow-xl hover:opacity-70 cursor-pointer"
@@ -131,49 +112,11 @@ const ProjectSection: React.FC = () => {
                                                 height={1000}
                                             />
                                         </button>
-                                        {project.isHidden === false && (
-                                            <div className="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center transform transition-all backdrop-blur-sm">
-                                                <div
-                                                    className="absolute h-2/4 w-2/3 grid md:grid-cols-2  gap-4 transform overflow-hidden p-12 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
-                                                >
-                                                    <div className="relative min-w-full min-h-full">
-                                                        <Image
-                                                            src={project.image}
-                                                            alt=''
-                                                            layout="fill"
-                                                            objectFit="cover"
-                                                            className=''
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <AiFillCloseCircle
-                                                            onClick={() => toggleVisibility(idx)}
-                                                            className="absolute top-4 right-4 hover:-translate-y-1 transition-transform cursor-pointer"
-                                                            size={40} />
-                                                        <div>
-                                                            <p>{project.description}</p>
-                                                        </div>
-                                                        <div className='flex gap-4'>
-                                                            {project.svg.map((svgLink, svgIdx) => (
-                                                                <Image
-                                                                    key={svgIdx} // Key for each Image component
-                                                                    src={svgLink}
-                                                                    alt={`SVG ${svgIdx}`}
-                                                                    height={40}
-                                                                    width={40}
-                                                                    className='hover:-translate-y-1 transition-transform'
-                                                                />
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
                                     </div>
-                                    <div className="mt-12 md:w-1/2">
-                                        <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                                        <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">{project.description}</p>
-                                        <div className="flex flex-row align-bottom space-x-4">
+                                    <div className="flex flex-col gap-2 md:gap-4 text-center md:text-start">
+                                        <h1 className="text-2xl md:text-3xl font-bold">{project.name}</h1>
+                                        <p className="text-lg md:text-xl leading-7 text-neutral-600 dark:text-neutral-400">{project.description}</p>
+                                        <div className="flex flex-row space-x-4 justify-center md:justify-start">
                                             <a href={project.github} target="_blank" className="hover:-translate-y-1 transition-transform cursor-pointer">
                                                 <BsGithub size={30} />
                                             </a>
@@ -183,10 +126,48 @@ const ProjectSection: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </SlideUp>
-                        </div>
-                    ))}
-                </div>
+                            </div>
+                            {project.isHidden === false && (
+                                <div className="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center transform transition-all backdrop-blur-sm">
+                                    <div
+                                        className="absolute h-2/4 w-2/3 grid md:grid-cols-2  gap-4 transform overflow-hidden p-12 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
+                                    >
+                                        <div className="relative min-w-full min-h-full">
+                                            <Image
+                                                src={project.image}
+                                                alt=''
+                                                layout="fill"
+                                                objectFit="cover"
+                                                className=''
+                                            />
+                                        </div>
+                                        <div>
+                                            <AiFillCloseCircle
+                                                onClick={() => toggleVisibility(idx)}
+                                                className="absolute top-4 right-4 hover:-translate-y-1 transition-transform cursor-pointer"
+                                                size={40} />
+                                            <div>
+                                                <p>{project.description}</p>
+                                            </div>
+                                            <div className='flex gap-4'>
+                                                {project.svg.map((svgLink, svgIdx) => (
+                                                    <Image
+                                                        key={svgIdx} // Key for each Image component
+                                                        src={svgLink}
+                                                        alt={`SVG ${svgIdx}`}
+                                                        height={40}
+                                                        width={40}
+                                                        className='hover:-translate-y-1 transition-transform'
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </SlideUp>
+                    </div>
+                ))}
             </div>
         </section>
     )

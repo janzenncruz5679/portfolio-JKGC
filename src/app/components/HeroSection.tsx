@@ -22,7 +22,6 @@ const HeroSection = () => {
           </div>
         </div>
         <div className='md:w-3/5 md:mt-2 '>
-          {/* <h1 className='font-bold text-4xl mt-6 md:text-7xl md:mt-0'>Hi, I am Janzenn!</h1> */}
           <TypeAnimation
             sequence={[
               'Hi,',

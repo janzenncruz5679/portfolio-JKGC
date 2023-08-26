@@ -26,10 +26,12 @@ const ContactSection: FC = () => {
 
         <section id='contact'>
             <div className='my-28 pb-12 md:py-12'>
-                <h1 className='text-center font-bold text-4xl'>
-                    Contact Me
-                    <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
-                </h1>
+                <div className='h-24'>
+                    <h1 className='text-center font-bold text-4xl'>
+                        Contact Me
+                        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+                    </h1>
+                </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='mb-5'>
                         <label

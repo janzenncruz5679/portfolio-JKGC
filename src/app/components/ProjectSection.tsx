@@ -70,8 +70,8 @@ const initialProjects: Project[] = [
     },
     {
         name: "Hospital Appointment System",
-        description: "A hospital appointment system using Laravel CRUD. Admin side utilized Corona admin template with Bootstrap, and user side employed One-health template with HTML/CSS styling.",
-        longDescription: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. My role in this project is a fullstack developer. ",
+        description: "A Laravel CRUD-based hospital appointment system. Admin employed Corona admin template with Bootstrap; users used One-health template with HTML/CSS.",
+        longDescription: "A Laravel CRUD-based hospital appointment system. Admin employed Corona admin template with Bootstrap; users used One-health template with HTML/CSS. Also a practice for developing our EMR system, understanding Laravel fundamentals and basic practices.",
         image: "/appointment-system.jpg",
         github: "https://github.com/ohmypotato/hospital-appointment-system",
         link: "https://github.com/ohmypotato/hospital-appointment-system",
@@ -105,7 +105,7 @@ const ProjectSection: React.FC = () => {
                     <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
                 </h1>
             </div>
-            <div className='flex flex-col space-y-12'>
+            <div className='flex flex-col space-y-14'>
                 {/* use map function to call const projects which is a dictionary */}
                 {/* Map over projects */}
                 {projects.map((project, idx) => (

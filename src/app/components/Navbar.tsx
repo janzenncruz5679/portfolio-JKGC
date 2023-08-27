@@ -50,8 +50,8 @@ export default function Navbar() {
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link to="home" smooth={true} onClick={() => scroll.scrollToTop()}>
               <div className="container flex items-center space-x-2">
-                <h2 className="md:text-3xl font-bold hidden lg:block cursor-pointer">Janzenn Kyle G. Cruz</h2>
-                <h2 className="md:text-3xl font-bold md:block lg:hidden">JKGC</h2>
+                <h2 className="md:text-4xl font-bold hidden lg:block cursor-pointer">Janzenn Kyle G. Cruz</h2>
+                <h2 className="text-4xl font-bold sm:block lg:hidden">JKGC</h2>
               </div>
             </Link>
             <div className="md:hidden">

@@ -9,7 +9,7 @@ import { TypeAnimation } from 'react-type-animation';
 const HeroSection = () => {
   return (
     <section id='home'>
-      <div className='flex flex-col text-center gap-8 items-center justify-center mb-12 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-38'>
+      <div className='flex flex-col text-center gap-4 md:gap-8 items-center justify-center mb-12 py-24 md:py-36 md:flex-row md:space-x-4 md:text-left'>
         <div className='md:w-1/2 md:mt-2'>
           <div className="relative w-48 h-48 md:w-96 md:h-96 xl:w-128 xl:h-128">
             <Image
@@ -58,7 +58,7 @@ const HeroSection = () => {
               smooth={true}
               offset={-100}
               duration={500}
-            >My Projects</Link>
+            ><p>My Projects</p></Link>
             <a
               className={
                 "text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer hover:-translate-y-1 transition-transform"
@@ -66,7 +66,10 @@ const HeroSection = () => {
               href={'/Janzenn_Cruz_CV.pdf'}
               target='_blank'
               download="Janzenn-Kyle-Cruz-CV.pdf"
-            >Download CV</a>
+            >
+              <p className="hidden md:block">Download CV</p>
+              <p className="block md:hidden">View CV</p>
+            </a>
           </div>
 
         </div>

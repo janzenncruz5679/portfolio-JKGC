@@ -51,7 +51,7 @@ const initialProjects: Project[] = [
     {
         name: "San Miguel District Hospital EMR",
         description: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. My role in this project is a fullstack developer. ",
-        longDescription: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. My role in this project is a fullstack developer. San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history.",
+        longDescription: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. For the frontend, we used HTML, CSS, and Javascript. For the backend, we used PHP and Laravel. For the database, we used MySQL. My role in this project is a fullstack developer. ",
         image: "/smdh-emr.jpg",
         github: "https://github.com/ohmypotato/SMDH-EMR",
         link: "https://github.com/ohmypotato/SMDH-EMR",
@@ -134,9 +134,9 @@ const ProjectSection: React.FC = () => {
                                             <a href={project.github} target="_blank" className="hover:-translate-y-1 transition-transform cursor-pointer">
                                                 <BsGithub size={30} />
                                             </a>
-                                            <Link href={project.link} target="_blank">
+                                            {/* <Link href={project.link} target="_blank">
                                                 <BsArrowUpRightSquare size={30} className="hover:-translate-y-1 transition-transform cursor-pointer" />
-                                            </Link>
+                                            </Link> */}
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@ const ProjectSection: React.FC = () => {
                             {project.isHidden === false && (
                                 <div className="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                     <div
-                                        className="absolute h-2/4 w-2/3 md:h-2/3 lg:h-3/4 grid gap-4 transform overflow-hidden p-6 md:p-12 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
+                                        className="absolute h-2/4 w-2/3 md:h-2/3 lg:h-4/5 xl:w-2/4 grid gap-4 transform overflow-hidden p-6 md:p-12 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
                                     >
                                         <div className=''>
                                             <div className="relative h-3/6 lg:h-3/5 xl:h-[65%] w-full">
@@ -162,9 +162,9 @@ const ProjectSection: React.FC = () => {
                                                     className="absolute top-2 right-2 lg:hover:-translate-y-1 lg:transition-transform cursor-pointer h-4 w-4 md:h-8 md:w-8" />
                                                 <div className='grid gap-2'>
                                                     <p className='text-[10px] md:text-base lg:hidden'>{project.description}</p>
-                                                    <p className='hidden lg:block text-[10px] md:text-base lg:text-xl'>{project.longDescription}</p>
+                                                    <p className='hidden lg:block text-[10px] md:text-base lg:text-lg'>{project.longDescription}</p>
                                                     <div>
-                                                    <h2 className='text-[10px] md:text-base lg:text-xl'>Stack used: </h2>
+                                                    <h2 className='text-[10px] md:text-base lg:text-lg'>Stack used: </h2>
                                                     <div className='flex flex-wrap gap-2 md:gap-4'>
                                                         {project.icon.map((IconComponent, iconIndex) => (
                                                             <IconComponent key={iconIndex} className='h-4 w-4 md:h-8 md:w-8' />
@@ -173,7 +173,7 @@ const ProjectSection: React.FC = () => {
                                                     </div>
                                                     <a
                                                         className={
-                                                            "text-neutral-100 font-semibold text-center mt-2 text-sm lg:text-xl bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer lg:hover:-translate-y-1 lg:transition-transform"
+                                                            "text-neutral-100 font-semibold text-center mt-2 lg:mt-1 lg:p-2 text-sm lg:text-xl bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer lg:hover:-translate-y-1 lg:transition-transform"
                                                         }
                                                         href={project.link}
                                                         target='_blank'

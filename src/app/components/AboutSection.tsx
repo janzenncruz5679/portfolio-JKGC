@@ -96,17 +96,16 @@ const AboutSection = () => {
                         <div className='flex flex-wrap gap-2 flex-row justify-center md:justify-start cursor-default'>
                             {skills.map((item, idx) => {
                                 return (
-                                    <motion.div
+                                    <div
                                         key={idx}
-                                        className='px-2 py-2 rounded font-semibold h-12 w-12 md:h-16 md:w-16 '
-                                        whileHover={{ scale: 1.1 }}
-                                        transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                                        className='font-semibold h-12 w-12 md:h-16 md:w-16 hover:-translate-y-0.5 transition-transform'
                                     >
                                         <item.skill 
                                             key={idx} 
                                             className="h-full w-full cursor-pointer"
                                             title={item.description}/>
-                                    </motion.div>
+                                    </div>
+                                    
                                 )
                             })}
                         </div>

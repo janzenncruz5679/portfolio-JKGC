@@ -114,7 +114,7 @@ const ProjectSection: React.FC = () => {
                         <SlideUp offset="-300px 0px -300px 0px">
                             <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                                 <div className='glass sm:flex sm:flex-col lg:grid lg:grid-cols-2 p-6 gap-4 lg:gap-6 rounded-3xl lg:hover:-translate-y-3 lg:transition-transform'>
-                                    <div className="h-full w-full">
+                                    <div className="aspect-video">
                                         <button
                                             onClick={() => toggleVisibility(idx)} // Click handler for the button
                                             className="rounded-xl shadow-xl hover:opacity-70 cursor-pointer"
@@ -126,6 +126,7 @@ const ProjectSection: React.FC = () => {
                                                 height={1000}
                                             />
                                         </button>
+                                        
                                     </div>
                                     <div className="flex flex-col gap-2 md:gap-4 text-center md:text-start">
                                         <h1 className="text-2xl md:text-3xl font-bold">{project.name}</h1>
@@ -142,45 +143,40 @@ const ProjectSection: React.FC = () => {
                                 </div>
                             </div>
                             {project.isHidden === false && (
-                                <div className="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center backdrop-blur-sm">
+                                <div className="fixed top-0 left-0 z-10 h-full w-full flex items-center justify-center backdrop-blur-sm">
                                     <div
-                                        className="absolute h-2/4 w-2/3 md:h-2/3 lg:h-4/5 xl:w-2/4 grid gap-4 transform overflow-hidden p-6 md:p-12 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
+                                        className="h-fit w-2/3 md:h-2/3 lg:h-4/5 xl:w-2/4 flex flex-col gap-4 transform overflow-hidden p-6 md:p-12 bg-neutral-100 dark:bg-neutral-900 rounded-2xl"
                                     >
-                                        <div className=''>
-                                            <div className="relative h-3/6 lg:h-3/5 xl:h-[65%] w-full">
-                                                <Image
-                                                    src={project.image}
-                                                    alt=''
-                                                    layout="fill"
-                                                    objectFit="cover"
-                                                    className='pb-2'
-                                                />
-                                            </div>
-                                            <div>
-                                                <AiFillCloseCircle
-                                                    onClick={() => toggleVisibility(idx)}
-                                                    className="absolute top-2 right-2 lg:hover:-translate-y-1 lg:transition-transform cursor-pointer h-4 w-4 md:h-8 md:w-8" />
-                                                <div className='grid gap-2'>
-                                                    <p className='text-[10px] md:text-base lg:hidden'>{project.description}</p>
-                                                    <p className='hidden lg:block text-[10px] md:text-base lg:text-lg'>{project.longDescription}</p>
-                                                    <div>
+                                        <div className="relative aspect-video">
+                                            <Image
+                                                src={project.image}
+                                                alt=''
+                                                layout="fill"
+                                                objectFit="cover"
+                                            />
+                                        </div>
+                                        <AiFillCloseCircle
+                                                onClick={() => toggleVisibility(idx)}
+                                                className="absolute top-2 right-2 lg:hover:-translate-y-1 lg:transition-transform cursor-pointer h-4 w-4 md:h-8 md:w-8" />
+                                            <div className='grid gap-2'>
+                                                <p className='text-[10px] md:text-base lg:hidden'>{project.description}</p>
+                                                <p className='hidden lg:block text-[10px] md:text-base lg:text-lg'>{project.longDescription}</p>
+                                                <div>
                                                     <h2 className='text-[10px] md:text-base lg:text-lg'>Stack used: </h2>
                                                     <div className='flex flex-wrap gap-2 md:gap-4'>
                                                         {project.icon.map((IconComponent, iconIndex) => (
                                                             <IconComponent key={iconIndex} className='h-4 w-4 md:h-8 md:w-8' />
                                                         ))}
                                                     </div>
-                                                    </div>
-                                                    <a
-                                                        className={
-                                                            "text-neutral-100 font-semibold text-center mt-2 lg:mt-1 lg:p-2 text-sm lg:text-xl bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer lg:hover:-translate-y-1 lg:transition-transform"
-                                                        }
-                                                        href={project.link}
-                                                        target='_blank'
-                                                    >View Project</a>
                                                 </div>
+                                                <a
+                                                    className={
+                                                        "text-neutral-100 font-semibold text-center mt-2 lg:mt-1 lg:p-2 text-sm lg:text-xl bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer lg:hover:-translate-y-1 lg:transition-transform"
+                                                    }
+                                                    href={project.link}
+                                                    target='_blank'
+                                                >View Repository</a>
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
                             )}

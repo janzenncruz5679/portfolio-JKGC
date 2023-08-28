@@ -69,14 +69,14 @@ const AboutSection = () => {
                     About Me
                     <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
                 </h1>
-                <div className='flex flex-col space-y-10 items-stretch justify-center align-top md:flex-row md:text-left md:p-4 md:space-y-0 md:space-x-10'>
-                    <div className='md:w-1/2'>
+                <div className='grid gap-12 space-y-10 items-stretch justify-center align-top md:flex-row md:text-left md:p-4 md:space-y-0'>
+                    <div className='w-full'>
                         <h1 className='text-center text-2xl font-bold mb-6 md:text-left'>My Scope of Work</h1>
                         <div className='grid gap-8'>
                             <motion.div
                                 className="glass p-4 rounded-lg shadow-lg cursor-default"
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 50, damping: 10 }}
+                                transition={{ type: "spring", stiffness: 100, damping: 10 }}
                             >
                                 <h1 className="text-2xl font-semibold mb-4">Web Development</h1>
                                 <p>I started my journey in web development during my time as a Senior High School student. Despite the challenges that come with it, I am committed to this path because of the immense satisfaction I derive from creating and improving websites. The process of coding and designing fascinates me, and I'm excited to continually learn and refine my skills.</p>
@@ -84,14 +84,14 @@ const AboutSection = () => {
                             <motion.div
                                 className="glass p-4 rounded-lg shadow-lg cursor-default"
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                transition={{ type: "spring", stiffness: 100, damping: 10 }}
                             >
                                 <h1 className="text-2xl font-semibold mb-4">Software Development</h1>
                                 <p>Starting in college, I explored software development, expanding my skills. A pivotal point was my third-year internship, propelling me to new levels. Real-world projects with pros taught me industry standards, workflows, and development lifecycles intricacies.</p>
                             </motion.div>
                         </div>
                     </div>
-                    <div className='md:w-1/2'>
+                    <div className='w-full'>
                         <h1 className='text-center text-2xl font-bold mb-6 md:text-left'> Technologies I've been working with: </h1>
                         <div className='flex flex-wrap gap-2 flex-row justify-center md:justify-start cursor-default'>
                             {skills.map((item, idx) => {
@@ -110,24 +110,8 @@ const AboutSection = () => {
                                 )
                             })}
                         </div>
-                        {/* <Image
-                            src="/boy.png"
-                            className='hidden, md:block md:relative md:bottom-4 md:left-32 md:z-0'
-                            alt=''
-                            width={325}
-                            height={100} /> */}
                     </div>
                 </div>
-                {/* <div className='flex flex-row justify-center'>
-                    <Link
-                        to="projects"
-                        activeClass="active"
-                        spy={true}
-                        smooth={true}
-                        offset={-100}
-                        duration={500}
-                    ><HiArrowDown size={35} className='animate-bounce' /></Link>
-                </div> */}
             </div>
         </section>
     )

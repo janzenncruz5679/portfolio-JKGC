@@ -84,6 +84,22 @@ const initialProjects: Project[] = [
             SiMysql,
         ],
     },
+    {
+        name: "JKGC Portfolio",
+        description: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS.",
+        longDescription: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS. I changed the template to make the system flow according to the patient's and doctor's appointment needs. It also served as practice for building our EMR system, which is the theme of our thesis. It also helps me grasp the fundamentals of Laravel and recommended practices.",
+        image: "/portfolio-ss.png",
+        github: "https://github.com/ohmypotato/hospital-appointment-system",
+        link: "https://github.com/ohmypotato/hospital-appointment-system",
+        isHidden: true,
+        icon: [
+            SiHtml5,
+            SiCss3,
+            SiBootstrap,
+            SiLaravel,
+            SiMysql,
+        ],
+    },
 ];
 
 

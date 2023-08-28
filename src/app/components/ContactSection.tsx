@@ -23,16 +23,15 @@ const ContactSection: FC = () => {
     }
 
     return (
-
         <section id='contact'>
-            <div className='my-28 pb-12 md:py-12'>
+            <div className='mt-28 pb-12 md:py-12'>
                 <div className='h-24'>
                     <h1 className='text-center font-bold text-4xl'>
                         Contact Me
                         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
                     </h1>
                 </div>
-                <div className='glass p-12 rounded-2xl'>
+                <div className='glass p-6 md:p-12 rounded-2xl'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='mb-5'>
                         <label
@@ -44,7 +43,7 @@ const ContactSection: FC = () => {
                         <input
                             type='text'
                             placeholder='Full Name'
-                            className='w-full rounded-md border-2 border-neutral-900 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-teal-500 focus:shadow-md'
+                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
                             {...register('name', { required: true })}
                         />
                     </div>
@@ -58,7 +57,7 @@ const ContactSection: FC = () => {
                         <input
                             type='email'
                             placeholder='example@gmail.com'
-                            className='w-full rounded-md border-2 border-neutral-900 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-teal-500 focus:shadow-md'
+                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
                             {...register('email', { required: true })}
                         />
                     </div>
@@ -72,7 +71,7 @@ const ContactSection: FC = () => {
                         <textarea
                             rows={4}
                             placeholder='Type your message'
-                            className='w-full resize-none rounded-md border-2 border-neutral-900 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-teal-500 focus:shadow-md'
+                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
                             {...register('message', { required: true })}
                         ></textarea>
                     </div>

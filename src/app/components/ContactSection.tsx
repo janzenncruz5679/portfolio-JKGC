@@ -71,7 +71,7 @@ const ContactSection: FC = () => {
                         <textarea
                             rows={4}
                             placeholder='Type your message'
-                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
+                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900 resize-none'
                             {...register('message', { required: true })}
                         ></textarea>
                     </div>

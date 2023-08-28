@@ -76,7 +76,7 @@ const AboutSection = () => {
                             <motion.div
                                 className="glass p-4 rounded-lg shadow-lg cursor-default"
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 100, damping: 10 }}
+                                transition={{ type: "spring", stiffness: 50, damping: 10 }}
                             >
                                 <h1 className="text-2xl font-semibold mb-4">Web Development</h1>
                                 <p>I started my journey in web development during my time as a Senior High School student. Despite the challenges that come with it, I am committed to this path because of the immense satisfaction I derive from creating and improving websites. The process of coding and designing fascinates me, and I'm excited to continually learn and refine my skills.</p>
@@ -84,7 +84,7 @@ const AboutSection = () => {
                             <motion.div
                                 className="glass p-4 rounded-lg shadow-lg cursor-default"
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 100, damping: 10 }}
+                                transition={{ type: "spring", stiffness: 50, damping: 10 }}
                             >
                                 <h1 className="text-2xl font-semibold mb-4">Software Development</h1>
                                 <p>Starting in college, I explored software development, expanding my skills. A pivotal point was my third-year internship, propelling me to new levels. Real-world projects with pros taught me industry standards, workflows, and development lifecycles intricacies.</p>

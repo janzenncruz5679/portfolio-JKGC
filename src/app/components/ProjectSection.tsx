@@ -55,11 +55,13 @@ const initialProjects: Project[] = [
         name: "San Miguel District Hospital EMR",
         description: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. My role in this project is a fullstack developer. ",
         longDescription: "San Miguel District Hospital EMR is our capstone project that can handle patient records, bills, and medical history. For the frontend, we used HTML, CSS, and Javascript. For the backend, we used PHP and Laravel. For the database, we used MySQL. My role in this project is a fullstack developer. ",
-        image: "/smdh-emr.jpg",
+        image: "/static/images/smdh/smdh-emr.png",
         imageModal: [
-            "/smdh-emr.jpg",
-            "/appointment-system.jpg",
-            "/portfolio-ss.png",
+            "/static/images/smdh/Screenshot_9.png",
+            "/static/images/smdh/Screenshot_11.png",
+            "/static/images/smdh/Screenshot_13.png",
+            "/static/images/smdh/Screenshot_14.png",
+            "/static/images/smdh/Screenshot_15.png",
         ],
         github: "https://github.com/ohmypotato/SMDH-EMR",
         link: "https://github.com/ohmypotato/SMDH-EMR",
@@ -84,7 +86,7 @@ const initialProjects: Project[] = [
         imageModal: [
             "/boy.png",
             "/portfolio-ss.png",
-            "/portfolio-ss.png",
+            
         ],
         github: "https://github.com/ohmypotato/hospital-appointment-system",
         link: "https://github.com/ohmypotato/hospital-appointment-system",

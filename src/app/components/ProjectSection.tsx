@@ -58,8 +58,8 @@ const initialProjects: Project[] = [
         image: "/smdh-emr.jpg",
         imageModal: [
             "/smdh-emr.jpg",
-            "/zen.png",
-            "/portfolio-ss.png"
+            "/appointment-system.jpg",
+            "/portfolio-ss.png",
         ],
         github: "https://github.com/ohmypotato/SMDH-EMR",
         link: "https://github.com/ohmypotato/SMDH-EMR",
@@ -76,22 +76,27 @@ const initialProjects: Project[] = [
             SiMysql,
         ],
     },
-    // {
-    //     name: "Hospital Appointment System",
-    //     description: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS.",
-    //     longDescription: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS. I changed the template to make the system flow according to the patient's and doctor's appointment needs. It also served as practice for building our EMR system, which is the theme of our thesis. It also helps me grasp the fundamentals of Laravel and recommended practices.",
-    //     image: "/appointment-system.jpg",
-    //     github: "https://github.com/ohmypotato/hospital-appointment-system",
-    //     link: "https://github.com/ohmypotato/hospital-appointment-system",
-    //     isHidden: true,
-    //     icon: [
-    //         SiHtml5,
-    //         SiCss3,
-    //         SiBootstrap,
-    //         SiLaravel,
-    //         SiMysql,
-    //     ],
-    // },
+    {
+        name: "Hospital Appointment System",
+        description: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS.",
+        longDescription: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS. I changed the template to make the system flow according to the patient's and doctor's appointment needs. It also served as practice for building our EMR system, which is the theme of our thesis. It also helps me grasp the fundamentals of Laravel and recommended practices.",
+        image: "/appointment-system.jpg",
+        imageModal: [
+            "/boy.png",
+            "/portfolio-ss.png",
+            "/portfolio-ss.png",
+        ],
+        github: "https://github.com/ohmypotato/hospital-appointment-system",
+        link: "https://github.com/ohmypotato/hospital-appointment-system",
+        isHidden: true,
+        icon: [
+            SiHtml5,
+            SiCss3,
+            SiBootstrap,
+            SiLaravel,
+            SiMysql,
+        ],
+    },
     // {
     //     name: "JKGC Portfolio",
     //     description: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS.",
@@ -139,6 +144,11 @@ const ProjectSection: React.FC = () => {
     const goToSlide = (slideIndex: number) => {
         setCurrentSlide(slideIndex);
     };
+
+    const resetSlide = () => {
+        setCurrentSlide(0); // Reset to initial value
+    };
+
 
 
     return (
@@ -201,7 +211,7 @@ const ProjectSection: React.FC = () => {
                                         <div className='relative aspect-video md:aspect-[21/9]'>
                                             <div className='w-full h-full flex justify-between rounded-2xl bg-center'>
                                                 <Image
-                                                    src={currentProject.imageModal[currentSlide]}
+                                                    src={project.imageModal[currentSlide]}
                                                     alt=''
                                                     layout='fill'
                                                     objectFit='cover'
@@ -232,7 +242,10 @@ const ProjectSection: React.FC = () => {
                                             </div>
                                         </div>
                                         <AiFillCloseCircle
-                                            onClick={() => toggleVisibility(idx)}
+                                            onClick={() => {
+                                                toggleVisibility(idx);
+                                                resetSlide();
+                                            }}
                                             className="absolute top-2 right-2 lg:hover:-translate-y-1 lg:transition-transform cursor-pointer h-4 w-4 md:h-8 md:w-8" />
                                         <div className='grid gap-2'>
                                             <p className='text-[10px] md:text-base lg:hidden'>{project.description}</p>

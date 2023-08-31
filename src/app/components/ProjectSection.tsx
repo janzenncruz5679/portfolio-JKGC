@@ -115,15 +115,17 @@ const initialProjects: Project[] = [
             "/static/images/myPortfolio/myPortfolioProj_5.png",
             
         ],
-        github: "https://github.com/ohmypotato/hospital-appointment-system",
-        link: "https://github.com/ohmypotato/hospital-appointment-system",
+        github: "https://github.com/ohmypotato/portfolio-JKGC",
+        link: "https://jkgc-portfolio.vercel.app/",
         isHidden: true,
         icon: [
             SiHtml5,
             SiCss3,
-            SiBootstrap,
-            SiLaravel,
-            SiMysql,
+            SiTailwindcss,
+            SiTypescript,
+            SiReact,
+            SiNextdotjs,
+            
         ],
     },
     {
@@ -139,15 +141,12 @@ const initialProjects: Project[] = [
             "/static/images/spaceInvaders/spaceInvader_5.jpg",
             
         ],
-        github: "https://github.com/ohmypotato/hospital-appointment-system",
-        link: "https://github.com/ohmypotato/hospital-appointment-system",
+        github: "https://github.com/ohmypotato/space_impact",
+        link: "https://github.com/ohmypotato/space_impact",
         isHidden: true,
         icon: [
-            SiHtml5,
-            SiCss3,
-            SiBootstrap,
-            SiLaravel,
-            SiMysql,
+            SiCsharp,
+            SiUnity,
         ],
     },
 ];

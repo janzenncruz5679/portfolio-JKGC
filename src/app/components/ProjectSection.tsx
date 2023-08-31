@@ -89,7 +89,7 @@ const initialProjects: Project[] = [
             "/static/images/hospitalAppoint/Screenshot_19.png",
             "/static/images/hospitalAppoint/Screenshot_20.png",
             "/static/images/hospitalAppoint/Screenshot_21.png",
-            
+
         ],
         github: "https://github.com/ohmypotato/hospital-appointment-system",
         link: "https://github.com/ohmypotato/hospital-appointment-system",
@@ -104,8 +104,8 @@ const initialProjects: Project[] = [
     },
     {
         name: "My Portfolio",
-        description: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS.",
-        longDescription: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS. I changed the template to make the system flow according to the patient's and doctor's appointment needs. It also served as practice for building our EMR system, which is the theme of our thesis. It also helps me grasp the fundamentals of Laravel and recommended practices.",
+        description: "A web portfolio showcasing my most current projects and abilities. This project also improves my skills in frontend development and my creativity in website design.",
+        longDescription: "A web portfolio showcasing my most current projects and abilities. This project also improves my skills in frontend development and my creativity in website design. Creating a web portfolio highlights your abilities and lets you explore frontend development and creative website design. It captures your professional journey, making a lasting digital impression beyond showcasing your work.",
         image: "/static/images/myPortfolio/myPortfolioProj.png",
         imageModal: [
             "/static/images/myPortfolio/myPortfolioProj_1.png",
@@ -113,10 +113,10 @@ const initialProjects: Project[] = [
             "/static/images/myPortfolio/myPortfolioProj_3.png",
             "/static/images/myPortfolio/myPortfolioProj_4.png",
             "/static/images/myPortfolio/myPortfolioProj_5.png",
-            
+
         ],
         github: "https://github.com/ohmypotato/portfolio-JKGC",
-        link: "https://jkgc-portfolio.vercel.app/",
+        link: "https://github.com/ohmypotato/portfolio-JKGC",
         isHidden: true,
         icon: [
             SiHtml5,
@@ -125,13 +125,13 @@ const initialProjects: Project[] = [
             SiTypescript,
             SiReact,
             SiNextdotjs,
-            
+
         ],
     },
     {
         name: "Space Invaders",
-        description: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS.",
-        longDescription: "A Laravel CRUD-based hospital appointment system. The admin side uses Corona admin template with Bootstrap while the user side, I use One-health template with HTML and CSS. I changed the template to make the system flow according to the patient's and doctor's appointment needs. It also served as practice for building our EMR system, which is the theme of our thesis. It also helps me grasp the fundamentals of Laravel and recommended practices.",
+        description: "A Unity 2D game made with C# and Unity. This project is a practice for my game development skills and a refresher for C# and Unity.",
+        longDescription: "A Unity 2D game made with C# and Unity. This project is a practice for my game development skills and a refresher for C# and Unity. The Unity 2D game I crafted using C# and Unity showcases my commitment to mastering game development. Through this project, I gained hands-on experience, refining my design and coding abilities. This culmination of efforts, undertaken to meet the final requirements of our Game Development subject, marks a significant step in my journey to becoming know the fundamentals of game development.",
         image: "/static/images/spaceInvaders/spaceInvader.jpg",
         imageModal: [
             "/static/images/spaceInvaders/spaceInvader_1.jpg",
@@ -139,7 +139,7 @@ const initialProjects: Project[] = [
             "/static/images/spaceInvaders/spaceInvader_3.jpg",
             "/static/images/spaceInvaders/spaceInvader_4.jpg",
             "/static/images/spaceInvaders/spaceInvader_5.jpg",
-            
+
         ],
         github: "https://github.com/ohmypotato/space_impact",
         link: "https://github.com/ohmypotato/space_impact",
@@ -221,9 +221,9 @@ const ProjectSection: React.FC = () => {
                                         <h1 className="text-2xl md:text-3xl font-bold">{project.name}</h1>
                                         <p className="text-lg md:text-xl leading-7 text-neutral-600 dark:text-neutral-400">{project.description}</p>
                                         <div className="flex flex-row space-x-4 justify-center md:justify-start">
-                                            <a href={project.github} target="_blank" className="hover:-translate-y-1 transition-transform cursor-pointer">
+                                            {/* <a href={project.github} target="_blank" className="hover:-translate-y-1 transition-transform cursor-pointer">
                                                 <BsGithub size={30} />
-                                            </a>
+                                            </a> */}
                                             {/* <Link href={project.link} target="_blank">
                                                 <BsArrowUpRightSquare size={30} className="hover:-translate-y-1 transition-transform cursor-pointer" />
                                             </Link> */}

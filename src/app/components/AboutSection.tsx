@@ -6,31 +6,35 @@ import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { motion } from "framer-motion"
 // import 'devicon/devicon.min.css'
-import {    SiHtml5, 
-            SiCss3, 
-            SiTailwindcss, 
-            SiBootstrap, 
-            SiSass, 
-            SiJavascript,
-            SiTypescript, 
-            SiJquery, 
-            SiReact, 
-            SiNextdotjs, 
-            SiCsharp, 
-            SiUnity, 
-            SiPhp, 
-            SiLaravel, 
-            SiMysql, 
-            SiGit, 
-            SiGithub, 
-            SiBitbucket,
-            SiJira,
-            SiAndroidstudio, } from 'react-icons/si'
-import {    BiLogoJava,
-            BiLogoAndroid,
-            BiLogoPython,
-            BiLogoFlutter,
-            BiLogoGoLang, } from 'react-icons/bi'
+import {
+    SiHtml5,
+    SiCss3,
+    SiTailwindcss,
+    SiBootstrap,
+    SiSass,
+    SiJavascript,
+    SiTypescript,
+    SiJquery,
+    SiReact,
+    SiNextdotjs,
+    SiCsharp,
+    SiUnity,
+    SiPhp,
+    SiLaravel,
+    SiMysql,
+    SiGit,
+    SiGithub,
+    SiBitbucket,
+    SiJira,
+    SiAndroidstudio,
+} from 'react-icons/si'
+import {
+    BiLogoJava,
+    BiLogoAndroid,
+    BiLogoPython,
+    BiLogoFlutter,
+    BiLogoGoLang,
+} from 'react-icons/bi'
 
 
 const skills = [
@@ -41,7 +45,7 @@ const skills = [
     { skill: SiSass, description: 'SASS' },
     { skill: SiJavascript, description: 'javascript' },
     { skill: SiTypescript, description: 'Typescript' },
-    { skill: SiJquery, description: 'jQuery'},
+    { skill: SiJquery, description: 'jQuery' },
     { skill: SiReact, description: 'React' },
     { skill: SiNextdotjs, description: 'Next.js' },
     { skill: SiCsharp, description: 'C#' },
@@ -78,7 +82,7 @@ const AboutSection = () => {
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ type: "spring", stiffness: 50, damping: 10 }}
                             >
-                                <h1 className="text-2xl font-semibold mb-4">Web Development</h1>
+                                <h1 className="text-2xl font-semibold mb-2">Web Development</h1>
                                 <p>I started my journey in web development during my time as a Senior High School student. Despite the challenges that come with it, I am committed to this path because of the immense satisfaction I derive from creating and improving websites. The process of coding and designing fascinates me, and I'm excited to continually learn and refine my skills.</p>
                             </motion.div>
                             <motion.div
@@ -86,8 +90,9 @@ const AboutSection = () => {
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ type: "spring", stiffness: 50, damping: 10 }}
                             >
-                                <h1 className="text-2xl font-semibold mb-4">Software Development</h1>
-                                <p>Starting in college, I explored software development, expanding my skills. A pivotal point was my third-year internship, propelling me to new levels. Real-world projects with pros taught me industry standards, workflows, and development lifecycles intricacies.</p>
+                                <h1 className="text-2xl font-semibold mb-2">Software Development</h1>
+                                <p>
+                                    During college, I learned software development and grew my skills. A key moment was my third-year internship, which boosted my progress. Working on real projects with experts taught me industry norms, workflows, and development processes. These experiences improved my problem-solving, teamwork, and adaptability, readying me for my career.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -100,12 +105,12 @@ const AboutSection = () => {
                                         key={idx}
                                         className='font-semibold h-12 w-12 md:h-14 md:w-14 hover:-translate-y-0.5 transition-transform'
                                     >
-                                        <item.skill 
-                                            key={idx} 
+                                        <item.skill
+                                            key={idx}
                                             className="h-full w-full cursor-pointer"
-                                            title={item.description}/>
+                                            title={item.description} />
                                     </div>
-                                    
+
                                 )
                             })}
                         </div>

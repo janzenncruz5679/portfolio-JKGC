@@ -43,7 +43,7 @@ const ContactSection: FC = () => {
                         <input
                             type='text'
                             placeholder='Full Name'
-                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
+                            className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-2 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
                             {...register('name', { required: true })}
                         />
                     </div>
@@ -57,7 +57,7 @@ const ContactSection: FC = () => {
                         <input
                             type='email'
                             placeholder='example@gmail.com'
-                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
+                            className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
                             {...register('email', { required: true })}
                         />
                     </div>
@@ -71,12 +71,12 @@ const ContactSection: FC = () => {
                         <textarea
                             rows={4}
                             placeholder='Type your message'
-                            className='w-full rounded-md p-3 text-base font-medium glass focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900 resize-none'
+                            className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900 resize-none'
                             {...register('message', { required: true })}
                         ></textarea>
                     </div>
                     <div>
-                        <button className='hover:shadow-form rounded-md bg-teal-600 shadow hover:bg-teal-700  py-3 px-6 text-neutral-100 font-semibold cursor-pointer hover:-translate-y-1 transition-transform'>
+                        <button className='w-full hover:shadow-form rounded-md bg-teal-600 shadow hover:bg-teal-700  py-3 px-6 text-neutral-100 font-semibold cursor-pointer hover:-translate-y-1 transition-transform'>
                             Submit
                         </button>
                     </div>

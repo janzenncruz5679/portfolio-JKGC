@@ -212,12 +212,13 @@ const ProjectSection: React.FC = () => {
                                             <Image
                                                 src={project.image}
                                                 alt=""
-                                                width={1000}
+                                                className='lg:aspect-video rounded-xl'
                                                 height={1000}
+                                                width={1000}
                                             />
                                         </button>
                                     </div>
-                                    <div className="flex flex-col gap-2 md:gap-4 text-center md:text-start">
+                                    <div className="flex flex-col gap-2 md:gap-4 justify-center text-center md:text-start">
                                         <h1 className="text-2xl md:text-3xl font-bold">{project.name}</h1>
                                         <p className="text-lg md:text-xl leading-7 text-neutral-600 dark:text-neutral-400">{project.description}</p>
                                         <div className="flex flex-row space-x-4 justify-center md:justify-start">

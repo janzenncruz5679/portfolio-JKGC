@@ -82,7 +82,7 @@ const AboutSection = () => {
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
                                 <h1 className="text-2xl font-semibold mb-2">Web Development</h1>
-                                <p>I started my journey in web development during my time as a Senior High School student. Despite the challenges that come with it, I am committed to this path because of the immense satisfaction I derive from creating and improving websites. The process of coding and designing fascinates me, and I'm excited to continually learn and refine my skills.</p>
+                                <p>I started my journey in web development during my time as a Senior High School student. Despite the challenges that come with it, I am committed to this path because of the immense satisfaction I derive from creating and improving websites. The process of coding and designing fascinates me, and I am excited to continually learn and refine my skills.</p>
                             </div>
                             <div
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
@@ -94,7 +94,7 @@ const AboutSection = () => {
                         </div>
                     </div>
                     <div className='w-full'>
-                        <h1 className='text-center text-2xl font-bold mb-6 md:text-left'> Technologies I've been working with: </h1>
+                        <h1 className='text-center text-2xl font-bold mb-6 md:text-left'> Technologies I have been working with: </h1>
                         <div className='flex flex-wrap gap-8 flex-row justify-center cursor-default'>
                             {skills.map((item, idx) => {
                                 return (

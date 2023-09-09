@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs'
 import { AiFillCloseCircle } from 'react-icons/ai'
@@ -209,13 +208,14 @@ const ProjectSection: React.FC = () => {
                                             onClick={() => toggleVisibility(idx)} // Click handler for the button
                                             className="rounded-xl shadow-xl hover:opacity-70 cursor-pointer"
                                         >
-                                            <Image
+                                            {/* <Image
                                                 src={project.image}
                                                 alt=""
                                                 className='lg:aspect-video rounded-xl'
                                                 height={1000}
                                                 width={1000}
-                                            />
+                                            /> */}
+                                            <img src={project.image} alt="projects" className='lg:aspect-video rounded-xl' />
                                         </button>
                                     </div>
                                     <div className="flex flex-col gap-2 md:gap-4 justify-center text-center md:text-start">
@@ -247,12 +247,13 @@ const ProjectSection: React.FC = () => {
                                         </div> */}
                                         <div className='relative aspect-video md:aspect-[21/9]'>
                                             <div className='w-full h-full flex justify-between rounded-2xl bg-center'>
-                                                <Image
+                                                {/* <Image
                                                     src={project.imageModal[currentSlide]}
                                                     alt=''
                                                     layout='fill'
                                                     objectFit='cover'
-                                                />
+                                                /> */}
+                                                <img src={project.imageModal[currentSlide]} alt="imageSlider" className="absolute inset-0 w-full h-full object-cover"/>
                                                 <div className='relative grid place-items-center m-1 md:m-2 w-6 md:w-8 lg:w-14'>
                                                     <BsChevronCompactLeft
                                                         onClick={prevSlide}

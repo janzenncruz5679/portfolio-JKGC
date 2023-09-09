@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react'
-import Image from 'next/image'
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { motion } from "framer-motion"

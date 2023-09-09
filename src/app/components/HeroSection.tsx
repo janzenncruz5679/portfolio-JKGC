@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react'
-import Image from 'next/image'
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation';
@@ -12,13 +11,14 @@ const HeroSection = () => {
       <div className='flex flex-col text-center gap-4 lg:gap-8 items-center justify-center my-16 lg:my-14 xl:my-24 py-24 md:py-28 xl:py-36 md:flex-row md:text-left'>
         <div className='md:w-1/2 md:mt-2 grid justify-center'>
           <div className="relative w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-128 xl:h-128">
-            <Image
+            {/* <Image
               src={'/zen.png'}
               alt='profile'
               layout="fill"
               objectFit="cover"
               className='rounded-full shadow-2xl'
-            />
+            /> */}
+            <img src="/zen.png" alt="profile" className='rounded-full shadow-2xl' />
           </div>
         </div>
         <div className='md:w-3/5 md:mt-2 '>

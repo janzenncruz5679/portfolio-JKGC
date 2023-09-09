@@ -35,7 +35,6 @@ const ContactSection: FC = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='mb-5'>
                         <label
-                            htmlFor='name'
                             className='mb-3 block text-xl font-medium'
                         >
                             Full Name
@@ -49,7 +48,6 @@ const ContactSection: FC = () => {
                     </div>
                     <div className='mb-5'>
                         <label
-                            htmlFor='email'
                             className='mb-3 block text-xl font-medium'
                         >
                             Email Address
@@ -63,7 +61,6 @@ const ContactSection: FC = () => {
                     </div>
                     <div className='mb-5'>
                         <label
-                            htmlFor='message'
                             className='mb-3 block text-xl font-medium'
                         >
                             Message

@@ -1,7 +1,7 @@
 "use client" // this is a client component
 import React from "react"
 import { useEffect, useState } from "react"
-import { Link , animateScroll as scroll } from "react-scroll/modules"
+import { Link, animateScroll as scroll } from "react-scroll/modules"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
@@ -22,6 +22,10 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "about",
   },
   {
+    label: "Experience",
+    page: "experience",
+  },
+  {
     label: "Projects",
     page: "projects",
   },
@@ -39,7 +43,7 @@ export default function Navbar() {
     if (currentTheme) {
       setTheme("light");
     }
-  }, []); 
+  }, []);
   const pathname = usePathname()
   const [navbar, setNavbar] = useState(false)
 
@@ -67,8 +71,7 @@ export default function Navbar() {
 
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-2 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
-              }`}
+            className={`flex-1 justify-self-center pb-3 mt-2 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}
           >
             <div className="items-center justify-center space-y-4 px-2 md:flex md:space-x-6 md:space-y-0 font-medium text-lg md:text-xl">
               {NAV_ITEMS.map((item, idx) => {
@@ -102,10 +105,10 @@ export default function Navbar() {
                   onClick={() => setTheme("dark")}
                   className="bg-slate-100 p-2 rounded-xl"
                 >
-                  <RiMoonFill size={25} color="black"/>
+                  <RiMoonFill size={25} color="black" />
                 </button>
               )}
-              
+
             </div>
           </div>
         </div>

@@ -5,14 +5,13 @@ import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation';
 import AOS from "aos"
-import "aos/dist/aos.css"
+// import "aos/dist/aos.css"
 
 const HeroSection = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000
+    import('aos').then(AOS => {
+      AOS.init();
     });
-    AOS.refresh();
   }, [])
   return (
     <section id='home'>

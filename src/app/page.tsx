@@ -5,6 +5,8 @@ import ProjectSection from './components/ProjectSection'
 import ContactSection from './components/ContactSection'
 import type { Metadata } from 'next'
 
+import 'aos/dist/aos.css';
+
 
 export const metadata: Metadata = {
   title: 'JKGC Portfolio',

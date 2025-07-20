@@ -17,7 +17,6 @@ import {
     SiJquery,
     SiReact,
     SiNextdotjs,
-    SiCsharp,
     SiUnity,
     SiPhp,
     SiLaravel,
@@ -144,7 +143,6 @@ const initialProjects: Project[] = [
         link: "https://github.com/ohmypotato/space_impact",
         isHidden: true,
         icon: [
-            SiCsharp,
             SiUnity,
         ],
     },
@@ -253,7 +251,7 @@ const ProjectSection: React.FC = () => {
                                                     layout='fill'
                                                     objectFit='cover'
                                                 /> */}
-                                                <img src={project.imageModal[currentSlide]} alt="imageSlider" className="absolute inset-0 w-full h-full object-cover"/>
+                                                <img src={project.imageModal[currentSlide]} alt="imageSlider" className="absolute inset-0 w-full h-full object-cover" />
                                                 <div className='relative grid place-items-center m-1 md:m-2 w-6 md:w-8 lg:w-14'>
                                                     <BsChevronCompactLeft
                                                         onClick={prevSlide}

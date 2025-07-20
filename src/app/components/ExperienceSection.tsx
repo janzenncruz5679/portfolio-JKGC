@@ -5,7 +5,7 @@ import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { motion } from "framer-motion"
 import AOS from "aos"
-import "aos/dist/aos.css"
+// import "aos/dist/aos.css"
 
 type TimelineItem = {
     title: string;
@@ -35,10 +35,9 @@ const timelineData: TimelineItem[] = [
 
 const AboutSection = () => {
     useEffect(() => {
-        AOS.init({
-            duration: 1000
+        import('aos').then(AOS => {
+            AOS.init();
         });
-        AOS.refresh();
     }, [])
     return (
         <section id='experience'>

@@ -5,7 +5,7 @@ import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { motion } from "framer-motion"
 import AOS from "aos"
-import "aos/dist/aos.css"
+// import "aos/dist/aos.css"
 
 // import 'devicon/devicon.min.css'
 import {
@@ -20,7 +20,6 @@ import {
     SiJquery,
     SiReact,
     SiNextdotjs,
-    SiCsharp,
     SiUnity,
     SiPhp,
     SiLaravel,
@@ -52,7 +51,6 @@ const skills = [
     { skill: SiJquery, description: 'jQuery' },
     { skill: SiReact, description: 'React' },
     { skill: SiNextdotjs, description: 'Next.js' },
-    { skill: SiCsharp, description: 'C#' },
     { skill: SiUnity, description: 'Unity' },
     { skill: SiPhp, description: 'PHP' },
     { skill: SiLaravel, description: 'Laravel' },
@@ -71,11 +69,10 @@ const skills = [
 
 const AboutSection = () => {
     useEffect(() => {
-        AOS.init({
-            duration: 1000
+        import('aos').then(AOS => {
+            AOS.init();
         });
-        AOS.refresh();
-    }, [])
+    }, []);
     return (
         <section id='about'>
             <div className='my-12 pb-12 md:pb-48'>

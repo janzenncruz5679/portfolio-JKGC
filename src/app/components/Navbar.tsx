@@ -43,7 +43,7 @@ export default function Navbar() {
     if (currentTheme) {
       setTheme("light");
     }
-  }, [currentTheme, setTheme]);
+  }, []);
   const pathname = usePathname()
   const [navbar, setNavbar] = useState(false)
 

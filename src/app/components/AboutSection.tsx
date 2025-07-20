@@ -70,7 +70,9 @@ const skills = [
 const AboutSection = () => {
     useEffect(() => {
         import('aos').then(AOS => {
-            AOS.init();
+            AOS.init({
+                duration: 1000,
+            });
         });
     }, []);
     return (
@@ -84,13 +86,13 @@ const AboutSection = () => {
                     <div className='w-full'>
                         <h1 className='text-center text-2xl font-bold mb-6 md:text-left'>My Scope of Work</h1>
                         <div className='grid md:flex gap-8'>
-                            <div data-aos="fade-left"
+                            <div data-aos="flip-up"
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
                                 <h1 className="text-2xl font-semibold mb-2">Web Development</h1>
                                 <p>I started my journey in web development during my time as a Senior High School student. Despite the challenges that come with it, I am committed to this path because of the immense satisfaction I derive from creating and improving websites. The process of coding and designing fascinates me, and I am excited to continually learn and refine my skills.</p>
                             </div>
-                            <div data-aos="fade-right"
+                            <div data-aos="flip-up"
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
                                 <h1 className="text-2xl font-semibold mb-2">Software Development</h1>

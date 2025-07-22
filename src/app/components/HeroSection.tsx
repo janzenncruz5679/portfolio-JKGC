@@ -65,12 +65,12 @@ const HeroSection = () => {
               className={
                 "text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer hover:-translate-y-1 transition-transform"
               }
-              href={'/static/documents/Cruz_Janzenn_Kyle_G_CV.pdf'}
+              href={'/static/documents/Cruz_Janzenn_Kyle_G_Resume.pdf'}
               target='_blank'
-              download="Cruz_Janzenn_Kyle_G_CV.pdf"
+              download="Cruz_Janzenn_Kyle_G_Resume.pdf"
             >
               <p className="hidden md:block">Download CV</p>
-              <p className="block md:hidden">View CV</p>
+              <p className="block md:hidden">View Resume</p>
             </a>
           </div>
 

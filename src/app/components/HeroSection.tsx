@@ -4,15 +4,10 @@ import React, { useEffect, useRef, ReactNode } from "react"
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation';
-import AOS from "aos"
-// import "aos/dist/aos.css"
+import { useAOS } from "../hooks/UseAOS"
 
 const HeroSection = () => {
-  useEffect(() => {
-    import('aos').then(AOS => {
-      AOS.init();
-    });
-  }, [])
+  useAOS();
   return (
     <section id='home'>
       <div data-aos="fade-up" className='flex flex-col text-center gap-4 lg:gap-8 items-center justify-center my-16 lg:my-14 xl:my-24 py-24 md:py-28 xl:py-36 md:flex-row md:text-left'>

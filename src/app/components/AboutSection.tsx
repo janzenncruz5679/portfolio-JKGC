@@ -5,7 +5,7 @@ import { Link } from "react-scroll/modules"
 import { HiArrowDown } from 'react-icons/hi'
 import { motion } from "framer-motion"
 import AOS from "aos"
-// import "aos/dist/aos.css"
+import { useAOS } from "../hooks/UseAOS"
 
 // import 'devicon/devicon.min.css'
 import {
@@ -68,13 +68,7 @@ const skills = [
 ]
 
 const AboutSection = () => {
-    useEffect(() => {
-        import('aos').then(AOS => {
-            AOS.init({
-                duration: 1000,
-            });
-        });
-    }, []);
+    useAOS();
     return (
         <section id='about'>
             <div className='my-12 pb-12 md:pb-48'>
@@ -85,19 +79,33 @@ const AboutSection = () => {
                 <div className='grid gap-12 space-y-10 items-stretch justify-center align-top md:flex-row md:text-left md:p-4 md:space-y-0'>
                     <div className='w-full'>
                         <h1 className='text-center text-2xl font-bold mb-6 md:text-left'>My Scope of Work</h1>
-                        <div className='grid md:flex gap-8'>
+                        <div className='grid md:grid-cols-2 gap-8'>
                             <div data-aos="flip-up"
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
-                                <h1 className="text-2xl font-semibold mb-2">Web Development</h1>
-                                <p>I started my journey in web development during my time as a Senior High School student. Despite the challenges that come with it, I am committed to this path because of the immense satisfaction I derive from creating and improving websites. The process of coding and designing fascinates me, and I am excited to continually learn and refine my skills.</p>
+                                <h1 className="text-2xl font-semibold mb-2">Frontend Web Development</h1>
+                                <p>Skilled at leveraging modern frontend technologies like HTML, CSS, JavaScript, and TypeScript to create dynamic, responsive websites. Also has experience with style tools like Tailwind CSS, Bootstrap, Sass, and jQuery, as well as frameworks and libraries like React, Vue.js, and Next.js. Also acquainted with WordPress content management and Axios API processing.</p>
                             </div>
                             <div data-aos="flip-up"
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
-                                <h1 className="text-2xl font-semibold mb-2">Software Development</h1>
+                                <h1 className="text-2xl font-semibold mb-2">Backend Web Development</h1>
                                 <p>
-                                    During college, I learned software development and grew my skills. A key moment was my third-year internship, which boosted my progress. Working on real projects with experts taught me industry norms, workflows, and development processes. These experiences improved my problem-solving, teamwork, and adaptability, readying me for my career.</p>
+                                    Proficient in backend development using Node.js, C#, Python, Golang, and PHP (with Laravel). knowledgeable about creating scalable server-side applications, automating system operations with PowerShell scripts, and designing and deploying RESTful APIs. Working on real projects with experts taught me industry norms, workflows, and development processes. These experiences improved my problem-solving, teamwork, and adaptability, readying me for my career.</p>
+                            </div>
+                            <div data-aos="flip-up"
+                                className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
+                            >
+                                <h1 className="text-2xl font-semibold mb-2">Database Management</h1>
+                                <p>
+                                    Experienced in relational database management using MySQL, MSSQL, PostgreSQL, and MariaDB. Skilled in writing complex SQL queries, optimizing database performance, and designing normalized schemas for scalable applications.</p>
+                            </div>
+                            <div data-aos="flip-up"
+                                className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
+                            >
+                                <h1 className="text-2xl font-semibold mb-2">Data Analysis</h1>
+                                <p>
+                                    Experienced in data analysis and reporting using Crystal Reports, Microsoft Excel, and Power BI. Proficient in querying and transforming data with MSSQL, MySQL, and DAX, with a strong focus on creating insightful dashboards and actionable business intelligence.</p>
                             </div>
                         </div>
                     </div>

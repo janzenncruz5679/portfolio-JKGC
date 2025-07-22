@@ -3,6 +3,7 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from '@/src/app/utils/send-email';
+import { useAOS } from "../hooks/UseAOS"
 
 
 export type FormData = {
@@ -13,6 +14,7 @@ export type FormData = {
 
 
 const ContactSection: FC = () => {
+    useAOS();
     const { register, handleSubmit, reset } = useForm<FormData>();
 
     function onSubmit(data: FormData) {
@@ -24,7 +26,7 @@ const ContactSection: FC = () => {
 
     return (
         <section id='contact'>
-            <div className='mt-28 pb-12 md:py-12'>
+            <div data-aos="fade-up" className='mt-28 pb-12 md:py-12'>
                 <div className='h-24'>
                     <h1 className='text-center font-bold text-4xl'>
                         Contact Me
@@ -32,52 +34,52 @@ const ContactSection: FC = () => {
                     </h1>
                 </div>
                 <div className='glass p-6 md:p-12 rounded-2xl'>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className='mb-5'>
-                        <label
-                            className='mb-3 block text-xl font-medium'
-                        >
-                            Full Name
-                        </label>
-                        <input
-                            type='text'
-                            placeholder='Full Name'
-                            className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-2 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
-                            {...register('name', { required: true })}
-                        />
-                    </div>
-                    <div className='mb-5'>
-                        <label
-                            className='mb-3 block text-xl font-medium'
-                        >
-                            Email Address
-                        </label>
-                        <input
-                            type='email'
-                            placeholder='example@gmail.com'
-                            className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
-                            {...register('email', { required: true })}
-                        />
-                    </div>
-                    <div className='mb-5'>
-                        <label
-                            className='mb-3 block text-xl font-medium'
-                        >
-                            Message
-                        </label>
-                        <textarea
-                            rows={4}
-                            placeholder='Type your message'
-                            className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900 resize-none'
-                            {...register('message', { required: true })}
-                        ></textarea>
-                    </div>
-                    <div>
-                        <button className='w-full hover:shadow-form rounded-md bg-teal-600 shadow hover:bg-teal-700  py-3 px-6 text-neutral-100 font-semibold cursor-pointer hover:-translate-y-1 transition-transform'>
-                            Submit
-                        </button>
-                    </div>
-                </form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className='mb-5'>
+                            <label
+                                className='mb-3 block text-xl font-medium'
+                            >
+                                Full Name
+                            </label>
+                            <input
+                                type='text'
+                                placeholder='Full Name'
+                                className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-2 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
+                                {...register('name', { required: true })}
+                            />
+                        </div>
+                        <div className='mb-5'>
+                            <label
+                                className='mb-3 block text-xl font-medium'
+                            >
+                                Email Address
+                            </label>
+                            <input
+                                type='email'
+                                placeholder='example@gmail.com'
+                                className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900'
+                                {...register('email', { required: true })}
+                            />
+                        </div>
+                        <div className='mb-5'>
+                            <label
+                                className='mb-3 block text-xl font-medium'
+                            >
+                                Message
+                            </label>
+                            <textarea
+                                rows={4}
+                                placeholder='Type your message'
+                                className='w-full rounded-md p-3 text-base border-2 border-teal-600 dark:border-teal-400 font-medium focus:outline-none focus:ring-4 focus:ring-teal-600 dark:focus:ring-teal-400 bg-white dark:bg-stone-900 resize-none'
+                                {...register('message', { required: true })}
+                            ></textarea>
+                        </div>
+                        <div>
+                            <button className='w-full hover:shadow-form rounded-md bg-teal-600 shadow hover:bg-teal-700  py-3 px-6 text-neutral-100 font-semibold cursor-pointer hover:-translate-y-1 transition-transform'>
+                                Submit
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className='scrollbar scroll-thin scrollbar-thumb-neutral-800 dark:scrollbar-thumb-neutral-100'>
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />

@@ -135,7 +135,7 @@ const ExperienceSection = () => {
                                     </h1> */}
                                     <ul className='list-disc list-inside space-y-2 text-sm'>
                                         <li>
-                                            Built a lightweight Single Page Application (SPA) for the Project Alpha website with a responsive frontend using Sass and Bootstrap, connected to a PHP backend, to address the need for a smoother user interface and faster data interaction. Tasked with improving user experience, I implemented responsive design and seamless data integration, resulting in improved navigation, faster page rendering, and more intuitive interactions for users.
+                                            Built a lightweight Single Page Application for the Project Alpha website with a responsive frontend using Sass and Bootstrap, connected to a PHP backend, to address the need for a smoother user interface and faster data interaction. Tasked with improving user experience, I implemented responsive design and seamless data integration, resulting in improved navigation, faster page rendering, and more intuitive interactions for users.
                                         </li>
                                         <li>
                                             Maintained and enhanced the Project Alpha website by building responsive React/Tailwind interfaces and improving reporting with custom PDFs and React-based data tables. Tasked with improving usability and reporting efficiency, I optimized frontend components and interactive reports, resulting in a smoother, more intuitive user experience and faster access to actionable data.

@@ -67,10 +67,10 @@ const HeroSection = () => {
               }
               href={'/static/documents/Cruz_Janzenn_Kyle_G_Resume.pdf'}
               target='_blank'
-              download="Cruz_Janzenn_Kyle_G_Resume.pdf"
+            // download="Cruz_Janzenn_Kyle_G_Resume.pdf"
             >
-              <p className="hidden md:block">Download CV</p>
-              <p className="block md:hidden">View Resume</p>
+              <p className="hidden md:block">My Resume</p>
+              <p className="block md:hidden">Resume</p>
             </a>
           </div>
 

@@ -84,28 +84,29 @@ const AboutSection = () => {
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
                                 <h1 className="text-2xl font-semibold mb-2">Frontend Web Development</h1>
-                                <p>Skilled at leveraging modern frontend technologies like HTML, CSS, JavaScript, and TypeScript to create dynamic, responsive websites. Also has experience with style tools like Tailwind CSS, Bootstrap, Sass, and jQuery, as well as frameworks and libraries like React, Vue.js, and Next.js. Also acquainted with WordPress content management and Axios API processing.</p>
+                                <p>Proficient in frontend web development technologies and frameworks, including HTML, CSS, JavaScript and TypeScript, with experience in modern libraries and frameworks such as React, Vue.js, and Next.js. Skilled in responsive and utility-first design using Tailwind CSS, Bootstrap 5, and Sass, as well as dynamic DOM manipulation with jQuery. Familiar with WordPress for content management and website development.</p>
+
                             </div>
                             <div data-aos="flip-up"
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
                                 <h1 className="text-2xl font-semibold mb-2">Backend Web Development</h1>
                                 <p>
-                                    Proficient in backend development using Node.js, C#, Python, Golang, and PHP (with Laravel). knowledgeable about creating scalable server-side applications, automating system operations with PowerShell scripts, and designing and deploying RESTful APIs. Working on real projects with experts taught me industry norms, workflows, and development processes. These experiences improved my problem-solving, teamwork, and adaptability, readying me for my career.</p>
+                                    Proficient in backend development using PHP (Laravel), Go, and Node.js, with experience designing and consuming RESTful APIs. Skilled in PowerShell and Linux shell scripting to automate workflows, streamline server operations, and optimize system performance, resulting in high-performance backend systems and faster integration between services.</p>
                             </div>
                             <div data-aos="flip-up"
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
-                                <h1 className="text-2xl font-semibold mb-2">Database Management</h1>
+                                <h1 className="text-2xl font-semibold mb-2">Data Analytics & Databases</h1>
                                 <p>
-                                    Experienced in relational database management using MySQL, MSSQL, PostgreSQL, and MariaDB. Skilled in writing complex SQL queries, optimizing database performance, and designing normalized schemas for scalable applications.</p>
+                                    Skilled in data analysis and business intelligence using Crystal Reports, Microsoft Excel, Power BI, and DAX queries, with experience extracting actionable insights and generating reports. Designed, queried, and optimized relational databases (MySQL, MSSQL, PostgreSQL, MariaDB) and implemented non-relational solutions (MongoDB) to support flexible data storage and improve decision-making efficiency.</p>
                             </div>
                             <div data-aos="flip-up"
                                 className="glass p-4 rounded-lg shadow-lg cursor-default hover:-translate-y-0.5 transition-transform"
                             >
-                                <h1 className="text-2xl font-semibold mb-2">Data Analysis</h1>
+                                <h1 className="text-2xl font-semibold mb-2">Tools & Technologies</h1>
                                 <p>
-                                    Experienced in data analysis and reporting using Crystal Reports, Microsoft Excel, and Power BI. Proficient in querying and transforming data with MSSQL, MySQL, and DAX, with a strong focus on creating insightful dashboards and actionable business intelligence.</p>
+                                    Experienced in leveraging Git, GitHub, and Bitbucket for version control, Postman and Axios for API testing, and Figma, Adobe XD, and Canva for UI/UX design. Managed project workflows with Jira and Kanban, utilized Zoho and Microsoft 365 for productivity, and configured local and cloud environments using Laragon, XAMPP, Apache, Vercel, AWS (EC2 – Windows and Ubuntu), Node-RED, and Hostinger. Explored AI tools such as Claude and OpenAI to optimize processes, enabling faster development cycles and reliable project delivery.</p>
                             </div>
                         </div>
                     </div>
